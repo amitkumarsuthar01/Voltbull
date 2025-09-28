@@ -6,6 +6,7 @@ import { BikeIcon } from "lucide-react";
 import HomePageCounts from "../components/HomePageCounts";
 import HomePageDistributer from "../components/HomePageDistributer";
 import PreLoader from "../components/PreLoader";
+import BatteryHotspot from "../components/BatteryHotspot";
 
 const Home = () => {
   return (
@@ -25,11 +26,11 @@ const Home = () => {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full py-16 px-2 md:px-28">
           <div className="flex flex-col gap-y-6">
-            <h1 className="text-red-600 text-5xl font-bold">
+            <h1 className="text-[#FF0000] text-[44px] lg:text-5xl leading-none font-extrabold">
               Unstoppable Power for Every Ride...
             </h1>
-            <div className="bg-black h-2 w-1/4 p" />
-            <p className="text-black font-normal">
+            <div className="bg-[#090000] h-2 w-1/4 p" />
+            <p className="text-black text-justify font-normal">
               VOLTBULL ENERGY PRIVATE LIMITED is a forward-thinking energy
               solutions company committed to delivering world-class power
               products for the modern rider. With a focus on innovation,
@@ -40,7 +41,7 @@ const Home = () => {
               and performance-driven products to India, backed by strong
               after-sales service and customer care.
             </p>
-            <p className="text-black font-normal">
+            <p className="text-black text-justify font-normal">
               <strong>VOLTBULL BATTERY</strong> is a high-performance imported
               bike battery crafted with advanced Korean technology, engineered
               to deliver unmatched power, reliability and long-lasting
@@ -49,13 +50,19 @@ const Home = () => {
               exceptional durability and superior safety features — making it
               the perfect choice for bikers who demand more from their ride.
             </p>
-            <button className="w-44 rounded-sm bg-gray-800 text-white text-base">
+            <button className="group relative w-40 rounded-sm bg-[#1A1A1A] text-white text-base font-medium">
               <Link
                 to="/contact"
-                className="relative z-10 flex items-center gap-2 py-3 px-6"
+                className="relative z-10 flex items-center gap-2 py-2 px-4"
               >
                 Explore More <BikeIcon className="w-4 h-4" />
               </Link>
+              <span
+                className="absolute inset-0 bg-[#B80004]
+               [clip-path:polygon(0_0,0_0,0_10%)]
+               group-hover:[clip-path:polygon(0_0,900%_0,0_1000%)]
+               transition-all duration-700 ease-in-out"
+              ></span>
             </button>
           </div>
           <div className="flex items-center justify-center">
@@ -77,33 +84,37 @@ const Home = () => {
         </div>
 
         <div
-          className="relative w-full flex flex-col items-center justify-center gap-4 py-12 px-6 text-white bg-fixed bg-cover bg-center"
+          className="relative w-full flex flex-col items-center justify-center gap-4 py-12 px-6 text-white lg:bg-fixed bg-cover bg-center"
           style={{ backgroundImage: "url('/images/why-Voltbull.jpg')" }}
         >
           {/* Smoke Layer */}
-          <div className="absolute inset-0 bg-black/60"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/80"></div>
+          {/* <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/80"></div> */}
+
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#020202A8] to-[#0C1115]"></div>
 
           {/* Content */}
           <div className="relative z-10 flex flex-col items-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-center">
               Excellence in Every Element
             </h1>
-            <p>
+            <p className="text-[13px] text-center font-normal leading-none">
               Power – Passion – Performance – Precision – Persistence –
               Protection – Prestige
             </p>
-            <div className="bg-red-600 h-[1px] w-40 mt-4" />
+            <div className="bg-[#FF0000] h-[1px] w-40 mt-4" />
           </div>
         </div>
         <div className="flex items-center justify-center py-4 lg:py-24 lg:px-16">
-          <img
+          {/* <img
             src="/images/Voltbullbattires-prod.png"
             alt="Home Battery"
             className="max-w-full h-auto lg:h-[450px]"
-          />
+          /> */}
+          <BatteryHotspot />
         </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] items-center justify-center bg-blue-700 text-white w-full py-6 px-2 xl:px-28 gap-4">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] items-center justify-center bg-[#045dc4] text-white w-full py-6 px-2 xl:px-28 gap-4">
           <div className="w-full">
             <img
               src="/images/tcs.png"
@@ -133,8 +144,6 @@ const Home = () => {
         <HomePageCounts />
 
         <HomePageDistributer />
-
-
       </div>
     </div>
   );

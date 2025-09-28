@@ -26,30 +26,25 @@ const TopBanner = ({ backgroundImage, staticText, words }) => {
   const firstPart = wordsArray.join(" ");
 
   return (
-    <div className="relative w-screen flex justify-center">
-      {/* Image */}
-      <img
-        src={backgroundImage}
-        alt="Banner"
-        className="w-screen object-cover lg:h-screen h-auto"
-      />
-
+    <div
+      className="relative w-screen min-h-[500px] lg:h-screen h-auto bg-cover bg-no-repeat bg-center md:bg-right-bottom flex justify-center items-center"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       {/* Content */}
-      <div className="absolute px-2 md:px-16 left-0 top-1/2 transform -translate-y-1/2 text-white">
+      <div className="absolute md:px-16 text-white text-left">
         <div className="lg:px-20 xl:px-40">
-          {" "}
-          {/* 40px padding for large screens */}
           {/* Static sentence first part */}
-          <h1 className="text-xl md:text-3xl lg:text-5xl font-bold leading-tight">
+          <h1 className="text-[32px] md:text-[55px] font-bold leading-tight">
             {firstPart}
           </h1>
+
           {/* Last word + flipping word */}
-          <h1 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight md:mt-2 flex items-center gap-2">
+          <h1 className="text-[32px] md:text-[55px] font-bold leading-tight mt-2 gap-2">
             {lastWord}{" "}
             <span className="flip-container">
               <span
-                className={`inline-block ${
-                  flipping ? "animate-flipXReverse" : ""
+                className={`inline-block text-[23px] md:text-[45px] transform-origin-bottom-center ${
+                  flipping ? "animate-flip-x-reverse" : ""
                 }`}
                 style={{
                   display: "inline-block",
@@ -61,14 +56,18 @@ const TopBanner = ({ backgroundImage, staticText, words }) => {
               </span>
             </span>
           </h1>
-          <div className="mt-2 md:mt-8 w-72 md:w-2/3 pr-6">
-            <p className="text-xs sm:text-sm lg:text-base">
+
+          {/* Description */}
+          <div className="mt-2 md:mt-8 w-72 sm:w-96 md:w-2/3 pr-0 md:pr-6">
+            <p className="text-xs sm:text-sm md:text-base font-normal">
               Designed for Indian roads and weather conditions, our batteries
-              deliver unmatched starting power,long life, and reliability—so you
-              can ride with confidence, anywhere, anytime.
+              deliver unmatched starting power, long life, and reliability—so
+              you can ride with confidence, anywhere, anytime.
             </p>
           </div>
-          <button className="group relative mt-2 md:mt-8 overflow-hidden rounded-sm bg-slate-900 text-white text-base">
+
+          {/* Learn More Button */}
+          <button className="group relative mt-4 md:mt-8 overflow-hidden rounded-sm bg-[#1A1A1A] text-white text-base">
             <Link
               to="/contact"
               className="relative z-10 flex items-center gap-2 md:py-3 md:px-6"
@@ -76,42 +75,16 @@ const TopBanner = ({ backgroundImage, staticText, words }) => {
               Learn More <BikeIcon className="w-4 h-4" />
             </Link>
 
-            {/* Circular expanding background */}
-            <span className="absolute bottom-0 left-0 w-4 h-4 bg-red-600 rounded-full transform scale-0 group-hover:scale-[25] transition-transform duration-700 ease-out"></span>
+            {/* triangle fill overlay */}
+            <span
+              className="absolute inset-0 bg-[#B80004]
+               [clip-path:polygon(0_0,0_0,0_10%)]
+               group-hover:[clip-path:polygon(0_0,900%_0,0_1000%)]
+               transition-all duration-700 ease-in-out"
+            ></span>
           </button>
         </div>
       </div>
-      <style jsx>{`
-        .flip-container {
-          display: inline-block;
-          perspective: 600px; /* gives depth to the flip */
-        }
-
-        @keyframes flipXReverse {
-          0% {
-            transform: rotateX(-90deg); /* start from bottom edge */
-            opacity: 0;
-          }
-          20% {
-            transform: rotateX(10deg); /* overshoot slightly backward */
-            opacity: 1;
-          }
-          50% {
-            transform: rotateX(-90deg); /* flip forward */
-            opacity: 0; /* hide text during swap */
-          }
-          100% {
-            transform: rotateX(0deg); /* back to normal */
-            opacity: 1;
-          }
-        }
-
-        .animate-flipXReverse {
-          transform-origin: bottom center; /* flip from bottom */
-          display: inline-block;
-          animation: flipXReverse 2s ease-in-out backwards;
-        }
-      `}</style>
     </div>
   );
 };

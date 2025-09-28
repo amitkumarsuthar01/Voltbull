@@ -17,21 +17,21 @@ const About = () => {
       <div className="flex flex-col py-16 max-w-6xl mx-auto px-6 gap-16 items-center justify-center">
         <div className="flex flex-col lg:flex-row gap-16 items-center justify-center">
           {/* Left Column */}
-          <div className="flex flex-col gap-6 w-full">
+          <div className="flex flex-col gap-2 w-full">
             <div className="flex flex-row items-center gap-4">
-              <div className="bg-black h-[2px] w-20"></div>
-              <h3 className="text-slate-800 font-semibold text-lg">About Us</h3>
+              <div className="bg-[#222222] h-[2px] w-20"></div>
+              <h2 className="text-[#222222] font-semibold text-base">About Us</h2>
             </div>
-            <h1 className="text-5xl font-bold">Our Story</h1>
+            <h1 className="text-[#222222] text-[35px] md:text-[40px] lg:text-[50px] font-extrabold">Our Story</h1>
             <img
               src="/images/VBABOUT-1.png"
               alt="bike image"
-              className="w-full h-auto object-cover rounded-lg shadow-md"
+              className="w-full h-auto object-cover shadow-md"
             />
           </div>
 
           {/* Right Column */}
-          <div className="w-full text-justify text-slate-700 leading-relaxed">
+          <div className="w-full text-justify text-[#444444] text-[13px] lg:text-base font-normal leading-relaxed">
             <p>
               <strong>VOLTBULL ENERGY PRIVATE LIMITED</strong> is a
               forward-thinking energy solutions company committed to delivering
@@ -59,23 +59,23 @@ const About = () => {
 
         {/* Mission / Vision / Core Values */}
         <div className="flex flex-col gap-y-6 w-full mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+          <h1 className="text-[#222222] text-[35px] md:text-[40px] lg:text-[50px] font-extrabold">
             Guiding Our Journey
           </h1>
-          <div className="bg-black h-[2px] w-1/2"></div>
+          <div className="bg-[#222222] h-[2px] w-1/2"></div>
 
           {/* Mission / Vision / Core Values */}
-          <div className="w-full max-w-6xl mx-auto px-6 space-y-10">
+          <div className="w-full max-w-6xl mx-auto space-y-10">
             {/* Mission */}
-            <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-x-12 p-6 pb-8 border-b border-red-600">
-              <div>
-                <h3 className="text-lg font-medium text-red-600">
+            <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-x-12 p-6 pb-8 border-b border-[#FF0000]">
+              <div className="py-4 lg:py-0">
+                <h3 className="text-base font-semibold text-[#FF0000]">
                   Direct & Clear
                 </h3>
               </div>
               <div className="flex flex-col gap-6">
-                <h3 className="text-xl font-semibold">OUR MISSION</h3>
-                <p className="text-sm leading-relaxed text-slate-700">
+                <h3 className="text-base text-[text-[#222222]] font-semibold">OUR MISSION</h3>
+                <p className="text-[13px] font-normal leading-relaxed text-[#444444">
                   To be the most trusted and innovative bike battery brand,
                   delivering world-class performance and reliability to riders,
                   setting new benchmarks in quality, technology and customer
@@ -87,15 +87,15 @@ const About = () => {
             </div>
 
             {/* Vision */}
-            <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-x-12 p-6 pb-8 border-b border-red-600">
-              <div>
-                <h3 className="text-lg font-medium text-red-600">
+            <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-x-12 p-6 pb-8 border-b border-[#FF0000]">
+              <div className="py-4 lg:py-0">
+                <h3 className="text-base font-semibold text-[#FF0000]">
                   Inspirational
                 </h3>
               </div>
               <div className="flex flex-col gap-6">
-                <h3 className="text-xl font-semibold">OUR VISION</h3>
-                <p className="text-sm leading-relaxed text-slate-700">
+                <h3 className="text-base text-[text-[#222222]] font-semibold">OUR VISION</h3>
+                <p className="text-[13px] font-normal leading-relaxed text-[#444444">
                   To power every ride with advanced Korean technology, ensuring
                   superior starting power, extended battery life and maximum
                   rider confidence, blending global expertise with local needs
@@ -108,31 +108,31 @@ const About = () => {
 
             {/* Core Values */}
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-x-12 p-6 pb-8">
-              <div>
-                <h3 className="text-lg font-medium text-red-600">
+              <div className="py-4 lg:py-0">
+                <h3 className="text-base font-semibold text-[#FF0000]">
                   Concise & Impactful
                 </h3>
               </div>
               <div className="flex flex-col gap-6">
-                <h3 className="text-xl font-semibold">OUR CORE VALUES</h3>
-                <ul className="">
-                  <li className="text-sm leading-relaxed text-slate-700">
+                <h3 className="text-base text-[text-[#222222]] font-semibold">OUR CORE VALUES</h3>
+                <ul className="text-[13px] font-normal leading-relaxed text-[#444444">
+                  <li>
                     <strong>Quality First - </strong>No compromise on premium
                     materials and strict performance standards.
                   </li>
-                  <li className="text-sm leading-relaxed text-slate-700">
+                  <li>
                     <strong>Innovation - </strong>Continuous improvement with
                     the latest advanced battery technologies.
                   </li>
-                  <li className="text-sm leading-relaxed text-slate-700">
+                  <li>
                     <strong>Customer Focus - </strong>Designed for maximum rider
                     safety, comfort, and complete satisfaction.
                   </li>
-                  <li className="text-sm leading-relaxed text-slate-700">
+                  <li>
                     <strong>Sustainability - </strong>Eco-conscious practices in
                     product design and safe disposal.
                   </li>
-                  <li className="text-sm leading-relaxed text-slate-700">
+                  <li>
                     <strong>Integrity - </strong>Honest, transparent, and
                     ethical business practices in every operation.
                   </li>
@@ -144,7 +144,7 @@ const About = () => {
       </div>
       <div className="bg-gradient-to-b from-transparent via-black/90 to-black/90">
         <div className="flex flex-col py-12 max-w-6xl mx-auto px-6 gap-6 items-center justify-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-black">
+          <h1 className="text-[35px] font-extrabold leading-none text-center text-black">
             Assured Excellence:
             <br />
             Our Official Certifications
@@ -164,14 +164,14 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 mt-8 w-full items-start">
             {/* Text Section */}
             <div>
-              <h3 className="text-red-600 uppercase tracking-wide">
+              <h3 className="text-[#FD3101] text-[15px] font-semibold uppercase tracking-wide">
                 AT VOLTBULL
               </h3>
-              <h1 className="text-2xl md:text-3xl text-white font-extrabold leading-tight mt-2">
+              <h1 className="text-3xl md:text-4xl text-white font-extrabold leading-tight mt-2">
                 CUSTOMER SATISFACTION IS FIRST
               </h1>
-              <div className="bg-red-600 h-[2px] mt-6 w-5/6"></div>
-              <p className="text-base md:text-base font-medium text-white leading-relaxed mt-6">
+              <div className="bg-[#FD3101] h-[2px] mt-6 w-5/6"></div>
+              <p className="text-[17px] font-normal text-white leading-relaxed mt-6">
                 We believe lasting partnerships are built on reliability,
                 excellence, and genuine commitment. Our customer-focused
                 approach guarantees a smooth and stress-free experience from the
@@ -199,7 +199,7 @@ const About = () => {
       </div>
 
       {/* Get In Touch Section */}
-      <div className="relative w-full flex flex-col items-center justify-center gap-4 py-16 px-6 text-white">
+      <div className="relative w-full flex flex-col items-center justify-center gap-4 py-20 px-6 text-white">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -207,16 +207,16 @@ const About = () => {
         ></div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/95"></div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center">
             Get In Touch!
           </h1>
-          <div className="bg-red-600 h-[1px] w-40 mt-4" />
+          <div className="bg-[#FF0000] h-[1px] w-40 mt-4" />
           <Link to="/contact">
-            <button className="bg-red-600 rounded-sm text-white px-6 py-3 text-base hover:bg-red-800 mt-4 mb-10">
+            <button className="bg-[#FF0000] rounded-sm text-white px-6 py-3 text-base hover:bg-red-800 mt-4 mb-10">
               Explore More
             </button>
           </Link>

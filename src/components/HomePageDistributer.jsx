@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const HomePageDistributer = () => {
   return (
     <div className="py-16 px-6 md:px-40">
-      <h1 className="text-4xl md:text-5xl text-slate-900 font-bold text-center mb-12">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#223463] font-semibold text-center mb-12">
         Voltbull Battery Distributor
         <br />
         Partner with a Leading Battery Brand
@@ -22,7 +22,7 @@ const HomePageDistributer = () => {
 
         {/* Content */}
         <div className="flex flex-col">
-          <p className="text-lg md:text-xl font-bold text-gray-500 mb-10">
+          <p className="text-xl font-normal text-gray-500 mb-10">
             We invite you to become a distributor for India’s leading
             two-wheeler battery manufacturing company. At Voltbull, we believe
             lasting partnerships are built on reliability, excellence, and
@@ -43,7 +43,7 @@ const HomePageDistributer = () => {
               <FaHandPointRight className="text-yellow-400 inline" />
               <Link
                 to="/distributer"
-                className="text-red-600 font-bold inline mx-1"
+                className="text-[#FF0000] font-bold inline mx-1"
               >
                 Click Here & Grow with Voltbull
               </Link>
@@ -56,7 +56,7 @@ const HomePageDistributer = () => {
 
           <Link
             to="/contact"
-            className="mt-6 w-48 inline-flex items-center gap-2 bg-gray-800 text-white py-3 px-6 rounded-md hover:bg-gray-900 transition-colors"
+            className="mt-6 w-44 inline-flex items-center gap-2 bg-[#1A1A1A] text-white py-3 px-6 rounded-sm hover:bg-gray-900 transition-colors"
           >
             Explore More <BikeIcon className="w-5 h-5" />
           </Link>

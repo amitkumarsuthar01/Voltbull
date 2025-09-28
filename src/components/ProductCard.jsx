@@ -3,25 +3,30 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => (
   <div
-    className={`group flex flex-col items-center rounded-lg shadow-md gap-4 overflow-hidden w-64 sm:w-[250px] md:w-[300px] lg:w-[320px] p-4 transition-all duration-300 bg-white hover:bg-red-600 text-black`}
+    className="group flex flex-col items-center rounded-[1.5rem] shadow-md gap-4 overflow-hidden w-full h-full p-4 transition-all duration-300 bg-white hover:bg-[#C50000] text-black"
   >
     <img
       src={product.img}
       alt={product.name}
-      className="h-40 sm:h-48 md:h-60 lg:h-72 object-contain transition-transform duration-300 group-hover:scale-105"
+      className="h-auto object-contain transition-transform duration-300 group-hover:scale-105"
     />
-    <h3 className="font-bold text-center mt-4 mb-2 transition-colors duration-300 group-hover:text-white">
+
+    {/* Product Name */}
+    <h3 className="font-bold text-[#333] text-center mt-4 mb-2 text-[1rem] transition-colors duration-300 group-hover:text-[#fff]">
       {product.name}
     </h3>
 
-    <div className="grid grid-cols-2 gap-2 lg:gap-4 text-sm text-gray-700 mt-2 w-full">
+    {/* Product Details */}
+    <div className="grid grid-cols-2 gap-2 lg:gap-4 text-[0.755rem] font-semibold text-[#666] mt-2 w-full">
       {["Capacity", "Size", "Color", "M.R.P."].map((label, idx) => (
         <div
           key={idx}
-          className="bg-gray-100 p-2 rounded text-center transition-colors duration-300 group-hover:bg-white group-hover:text-red-600"
+          className="bg-[#e5e7eb] p-2 rounded-xl text-center transition-colors duration-300 group-hover:bg-white group-hover:text-[#C50000]"
         >
-          <p className="font-semibold text-red-600 group-hover:text-red-600">{label}</p>
-          <p>
+          <p className="font-semibold text-[#C50000] text-[1.125rem] group-hover:text-[#C50000]">
+            {label}
+          </p>
+          <p className="text-[0.75rem] font-medium">
             {label === "Capacity" && `@C10(AH) : ${product.capacity}`}
             {label === "Size" && product.size}
             {label === "Color" && product.color}
@@ -31,13 +36,15 @@ const ProductCard = ({ product }) => (
       ))}
     </div>
 
+    {/* Button */}
     <Link
       to="/contact"
-      className="mt-4 w-full text-center py-2 rounded bg-red-600 text-white border border-transparent transition-all duration-300 group-hover:border-white"
+      className="mt-4 w-full text-center py-2 rounded-full bg-[#C50000] text-[#fff] border-2 border-transparent text-[0.875rem] font-semibold transition-all duration-300 group-hover:border-white"
     >
       Explore More
     </Link>
   </div>
 );
+
 
 export default ProductCard;

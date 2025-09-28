@@ -180,9 +180,7 @@ const Certificates = () => {
               >
                 <ZoomOut className="text-white" />
               </button>
-              {/* <button onClick={() => setFullscreen(!fullscreen)} className="p-2 bg-white/20 rounded-full hover:bg-white/40">
-                <Maximize2 className="text-white" />
-              </button> */}
+              
               {/* Fullscreen button */}
               <button
                 onClick={toggleFullscreen}

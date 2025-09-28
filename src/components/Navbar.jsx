@@ -13,15 +13,15 @@ const Navbar = () => {
   // ✅ Sliding underline effect
   const linkClasses = ({ isActive }) =>
     `relative pb-1 transition-all duration-700 
-     ${isActive ? "text-red-600" : "text-gray-700 hover:text-red-600"} 
+     ${isActive ? "text-[#FF0000]" : "text-gray-700 hover:text-[#FF0000]"} 
      after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] 
-     after:bg-red-600 after:transition-all after:duration-700 
+     after:bg-[#FF0000] after:transition-all after:duration-700 
      ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}`;
 
     const linkClassesMobile = ({ isActive }) =>
   `relative text-center w-full px-4 py-2 border-b border-gray-300
-   ${isActive ? "text-white bg-red-600 border-red-600 after:w-full" : "text-gray-700 hover:text-red-600"}
-   after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-red-600
+   ${isActive ? "text-white bg-[#FF0000] border-[#FF0000] after:w-full" : "text-gray-700 hover:text-[#FF0000]"}
+   after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-[#FF0000]
    ${isActive ? "" : "after:w-0 hover:after:w-full after:transition-all after:duration-700"} 
    ${isActive ? "transition-none" : "transition-colors duration-700"}`;
 
@@ -50,7 +50,7 @@ const Navbar = () => {
         {/* Mobile Hamburger Button */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <FaBars size={24} className="text-red-600" /> : <FaBars size={24} className="text-gray-700" />}
+            {isOpen ? <FaBars size={24} className="text-[#FF0000]" /> : <FaBars size={24} className="text-gray-700" />}
           </button>
         </div>
       </nav>

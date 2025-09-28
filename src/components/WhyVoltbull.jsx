@@ -18,7 +18,7 @@ const WhyVoltbull = () => {
         <div className="flex flex-col items-center gap-6">
           <h1 className="font-semibold text-4xl md:text-5xl">Why Choose</h1>
 
-          <h1 className="font-bold text-5xl md:text-6xl text-red-600 relative inline-block">
+          <h1 className="font-bold text-5xl md:text-6xl text-[#FF0000] relative inline-block">
             Volt Bull
             <span>
             <svg
@@ -70,7 +70,7 @@ const WhyVoltbull = () => {
               "Skilled Workforce - Trained professionals committed to quality, safety, and efficiency.",
             ].map((text, i) => (
               <div key={i} className="flex gap-3 items-start">
-                <span className="text-red-600 text-xl">⚡</span>
+                <span className="text-[#FF0000] text-xl">⚡</span>
                 <p className="text-sm md:text-base">{text}</p>
               </div>
             ))}
@@ -85,7 +85,7 @@ const WhyVoltbull = () => {
               "Eco-Friendly Operations - Sustainable production with recyclable materials and green manufacturing practices.",
             ].map((text, i) => (
               <div key={i} className="flex gap-3 items-start">
-                <span className="text-red-600 text-xl">⚡</span>
+                <span className="text-[#FF0000] text-xl">⚡</span>
                 <p className="text-sm md:text-base">{text}</p>
               </div>
             ))}

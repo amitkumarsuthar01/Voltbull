@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { FaCaretDown } from "react-icons/fa";
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
   return (
@@ -7,13 +7,13 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
       {/* Header */}
       <button
         onClick={onClick}
-        className={`w-full flex items-center gap-2 py-3 text-left text-xl font-bold uppercase transition-colors duration-300 ${
-          isOpen ? "text-red-600" : "text-gray-600"
+        className={`w-full flex items-center gap-2 py-2 text-left text-sm lg:text-base font-bold uppercase transition-colors duration-300 ${
+          isOpen ? "text-[#FF0000]" : "text-[#4F4F4F]"
         }`}
       >
-        <ChevronDown
+        <FaCaretDown
           className={`w-5 h-5 transform transition-transform duration-300 ${
-            isOpen ? "rotate-180 text-red-600" : "text-gray-600"
+            isOpen ? "rotate-180 text-[#FF0000]" : "text-[#4F4F4F]"
           }`}
         />
         <span>{title}</span>
@@ -25,18 +25,18 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
           isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="pb-4 text-slate-600 space-y-5">
+        <div className="pb-4 text-[#575656] space-y-5">
           {content.map((section, idx) => (
             <div key={idx}>
-              <h4 className="text-sm font-semibold">{section.heading}</h4>
+              <h4 className="text-[13px] font-semibold">{section.heading}</h4>
               {section.items ? (
-                <ul className="text-sm list-disc pl-8">
+                <ul className="text-[13px] list-disc pl-8">
                   {section.items.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
               ) : (
-                <p className="text-sm">{section.text}</p>
+                <p className="text-[13px]">{section.text}</p>
               )}
             </div>
           ))}

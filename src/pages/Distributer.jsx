@@ -12,11 +12,11 @@ const Distributer = () => {
         staticText="Together We Grow"
         words={["Partner With Us", "Grow With Us", "Join Our Network"]}
       />
-      <div className="flex flex-col items-start justify-center py-16 px-4 lg:px-10 xl:px-40 gap-y-6">
-        <div className="bg-red-600 w-full text-3xl font-bold text-white p-2">
+      <div className="flex flex-col items-start justify-center py-16 px-6 lg:px-10 xl:px-40 gap-y-6">
+        <div className="bg-[#FF0000] w-full text-3xl font-bold text-white p-2">
           <h2>Partner with Us: Become a Distributor</h2>
         </div>
-        <div>
+        <div className="text-[#000000] font-normal">
           <p>
             Are you looking to expand your business and join a rapidly growing
             network of successful partners? We invite you to become a
@@ -31,24 +31,24 @@ const Distributer = () => {
             long-term profitability and loyalty.
           </p>
         </div>
-        <button className="bg-black rounded-sm text-white p-3 text-base flex items-center gap-2 hover:bg-red-600">
+        <button className="bg-black rounded-sm text-white p-3 text-base flex items-center gap-2 hover:bg-[#FF0000]">
           <Link to="/contact" className="flex items-center gap-2">
             Contact Now <BikeIcon className="w-4 h-4" />
           </Link>
         </button>
         <div>
           <div>
-            <h1 className="text-5xl font-semibold">
+            <h1 className="text-3xl md:4xl lg:5xl font-bold">
               Essential Details & Information
             </h1>
-            <div className="bg-red-600 h-[3px] w-32 mt-4" />
+            <div className="bg-[#FF0000] h-[3px] w-32 mt-4" />
           </div>
-          <div className="ml-10">
+          <div className="">
             <Accordion />
           </div>
         </div>
       </div>
-      <div className="relative w-full flex flex-col items-center justify-center gap-4 py-16 px-6 text-white">
+      <div className="relative w-full flex flex-col items-center justify-center gap-4 py-16 px-20 text-white">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90"
@@ -56,15 +56,15 @@ const Distributer = () => {
         ></div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/95"></div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center">
             Get In Touch!
           </h1>
-          <div className="bg-red-600 h-[1px] w-40 mt-4" />
-          <button className="bg-red-600 rounded-sm text-white p-3 text-base hover:bg-red-800 mt-4 mb-10">
+          <div className="bg-[#FF0000] h-[1px] w-40 mt-4" />
+          <button className="bg-[#FF0000] rounded-sm text-white p-3 text-base hover:bg-red-800 mt-4 mb-10">
             <Link to="/contact" className="flex items-center gap-2">
               Explore More
             </Link>
