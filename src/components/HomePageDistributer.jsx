@@ -56,7 +56,7 @@ const HomePageDistributer = () => {
 
           <Link
             to="/contact"
-            className="mt-6 w-44 inline-flex items-center gap-2 bg-[#1A1A1A] text-white py-3 px-6 rounded-sm hover:bg-gray-900 transition-colors"
+            className="mt-6 w-48 inline-flex items-center gap-2 bg-[#1A1A1A] text-white py-3 px-6 rounded-sm hover:bg-gray-900 transition-colors"
           >
             Explore More <BikeIcon className="w-5 h-5" />
           </Link>

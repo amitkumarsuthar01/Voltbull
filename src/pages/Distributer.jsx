@@ -3,8 +3,15 @@ import TopBanner from "../components/TopBanner";
 import { BikeIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import Accordion from "../components/Accordion";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Distributer = () => {
+
+  useEffect(() => {
+    Aos.init({ duration: 1500, once: true });
+  }, []);
   return (
     <div>
       <TopBanner
@@ -36,17 +43,20 @@ const Distributer = () => {
             Contact Now <BikeIcon className="w-4 h-4" />
           </Link>
         </button>
+
+        <div data-aos="fade-right">
         <div>
-          <div>
-            <h1 className="text-3xl md:4xl lg:5xl font-bold">
-              Essential Details & Information
-            </h1>
-            <div className="bg-[#FF0000] h-[3px] w-32 mt-4" />
-          </div>
-          <div className="">
-            <Accordion />
-          </div>
+          <h1 className="text-3xl md:4xl lg:5xl font-bold">
+            Essential Details & Information
+          </h1>
+          <div className="bg-[#FF0000] h-[3px] w-32 mt-4" />
         </div>
+        <div>
+          <Accordion />
+        </div>
+      </div>
+
+
       </div>
       <div className="relative w-full flex flex-col items-center justify-center gap-4 py-20 px-6 text-white">
         {/* Background Image */}
