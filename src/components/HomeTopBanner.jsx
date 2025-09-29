@@ -27,7 +27,7 @@ const TopBanner = ({ backgroundImage, staticText, words }) => {
 
   return (
     <div
-      className="relative w-screen min-h-[500px] lg:h-screen h-auto bg-cover bg-no-repeat bg-center md:bg-right-bottom flex justify-center items-center"
+      className="relative w-full min-h-[500px] lg:h-screen h-auto bg-cover bg-no-repeat bg-center md:bg-right-bottom flex justify-center items-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Content */}
@@ -79,7 +79,7 @@ const TopBanner = ({ backgroundImage, staticText, words }) => {
             <span
               className="absolute inset-0 bg-[#B80004]
                [clip-path:polygon(0_0,0_0,0_10%)]
-               group-hover:[clip-path:polygon(0_0,900%_0,0_1000%)]
+               group-hover:[clip-path:polygon(0_0,300%_0,0_500%)]
                transition-all duration-700 ease-in-out"
             ></span>
           </button>

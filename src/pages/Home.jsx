@@ -60,7 +60,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#B80004]
                [clip-path:polygon(0_0,0_0,0_10%)]
-               group-hover:[clip-path:polygon(0_0,900%_0,0_1000%)]
+               group-hover:[clip-path:polygon(0_0,300%_0,0_500%)]
                transition-all duration-700 ease-in-out"
               ></span>
             </button>
