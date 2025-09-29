@@ -4,7 +4,7 @@
 // import { MdEmail } from "react-icons/md";
 
 // const Contact = () => {
-  
+
 //   const [formData, setFormData] = useState({
 //     firstName: "",
 //     lastName: "",
@@ -224,9 +224,6 @@
 
 // export default Contact;
 
-
-
-
 import React, { useState } from "react";
 import TopBanner from "../components/TopBanner";
 import { Map, MapPin, PhoneCall } from "lucide-react";
@@ -256,27 +253,25 @@ const Contact = () => {
       to_name: "VoltBull",
     };
 
-    const publicKey = "TxLpY58Fod9UbA532";
-    const serviceId = "service_3adswet";
-    const templateId = "template_va3hpkz";
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+    const serviceId = import.meta.env.VITE_SERVICE_ID;
+    const templateId = import.meta.env.VITE_TEMPLATE_ID;
 
-    emailjs
-      .send(serviceId, templateId, templateParams, { publicKey })
-      .then(
-        () => {
-          setFormSubmitted(true);
-          setFirstName("");
-          setLastName("");
-          setEmail("");
-          setSubject("");
-          setMessage("");
-          setLoading(false);
-        },
-        (error) => {
-          console.error("Email send failed:", error.text);
-          setLoading(false);
-        }
-      );
+    emailjs.send(serviceId, templateId, templateParams, { publicKey }).then(
+      () => {
+        setFormSubmitted(true);
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+        setLoading(false);
+      },
+      (error) => {
+        console.error("Email send failed:", error.text);
+        setLoading(false);
+      }
+    );
   };
 
   return (
