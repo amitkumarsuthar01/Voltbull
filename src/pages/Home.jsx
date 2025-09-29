@@ -13,7 +13,7 @@ const Home = () => {
     <div>
       <PreLoader />
       <HomeTopBanner
-        backgroundImage="/images/home-bike.jpg"
+        backgroundImage="/images/home-bike.webp"
         staticText="Electrifying Voltbull Batteries"
         words={[
           "Certified",
