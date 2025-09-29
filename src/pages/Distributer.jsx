@@ -48,23 +48,23 @@ const Distributer = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full flex flex-col items-center justify-center gap-4 py-16 px-20 text-white">
+      <div className="relative w-full flex flex-col items-center justify-center gap-4 py-20 px-6 text-white">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-90"
+          className="absolute inset-0 bg-cover bg-center opacity-95"
           style={{ backgroundImage: "url('/images/VBABOUT-1.png')" }}
         ></div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/0 to-[#0C1115]"></div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center">
             Get In Touch!
           </h1>
-          <div className="bg-[#FF0000] h-[1px] w-40 mt-4" />
-          <button className="bg-[#FF0000] rounded-sm text-white p-3 text-base hover:bg-red-800 mt-4 mb-10">
+          <div className="bg-[#FF1A44] h-[1px] w-40 mt-4" />
+          <button className="bg-[#FF1A44] rounded-sm text-white p-3 text-base hover:bg-red-800 mt-4 mb-10">
             <Link to="/contact" className="flex items-center gap-2">
               Explore More
             </Link>

@@ -207,16 +207,16 @@ const About = () => {
         ></div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/0 to-[#0C1115]"></div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center">
             Get In Touch!
           </h1>
-          <div className="bg-[#FF0000] h-[1px] w-40 mt-4" />
+          <div className="bg-[#FF1A44] h-[1px] w-40 mt-4" />
           <Link to="/contact">
-            <button className="bg-[#FF0000] rounded-sm text-white px-6 py-3 text-base hover:bg-red-800 mt-4 mb-10">
+            <button className="bg-[#FF1A44] rounded-sm text-white p-3 text-base hover:bg-red-800 mt-4 mb-10">
               Explore More
             </button>
           </Link>

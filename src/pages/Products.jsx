@@ -85,7 +85,7 @@ const Products = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Form submitted!");
+    console.log("Form submitted!");
     setFormData({ name: "", product: "", email: "", phone: "" });
   };
 
