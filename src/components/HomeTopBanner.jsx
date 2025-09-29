@@ -31,7 +31,7 @@ const TopBanner = ({ backgroundImage, staticText, words }) => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Content */}
-      <div className="absolute md:px-16 text-white text-left">
+      <div className="absolute px-6 md:px-16 text-white text-left">
         <div className="lg:px-20 xl:px-40">
           {/* Static sentence first part */}
           <h1 className="text-[32px] md:text-[55px] font-bold leading-tight">
@@ -41,7 +41,7 @@ const TopBanner = ({ backgroundImage, staticText, words }) => {
           {/* Last word + flipping word */}
           <h1 className="text-[32px] md:text-[55px] font-bold leading-tight mt-2 gap-2">
             {lastWord}{" "}
-            <span className="flip-container">
+            <span className="block md:inline flip-container">
               <span
                 className={`inline-block text-[23px] md:text-[45px] transform-origin-bottom-center ${
                   flipping ? "animate-flip-x-reverse" : ""
@@ -67,10 +67,10 @@ const TopBanner = ({ backgroundImage, staticText, words }) => {
           </div>
 
           {/* Learn More Button */}
-          <button className="group relative mt-4 md:mt-8 overflow-hidden rounded-sm bg-[#1A1A1A] text-white text-base">
+          <button className="group relative mt-4 md:mt-8 overflow-hidden rounded-sm bg-black md:bg-[#1A1A1A] text-white text-base">
             <Link
               to="/contact"
-              className="relative z-10 flex items-center gap-2 md:py-3 md:px-6"
+              className="relative z-10 flex items-center gap-2 p-2 md:py-3 md:px-6"
             >
               Learn More <BikeIcon className="w-4 h-4" />
             </Link>
