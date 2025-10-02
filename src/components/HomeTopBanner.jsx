@@ -69,7 +69,7 @@ const TopBanner = ({ backgroundImage, staticText, words }) => {
           {/* Learn More Button */}
           <button className="group relative mt-4 md:mt-8 overflow-hidden rounded-sm bg-black md:bg-[#1A1A1A] text-white text-base">
             <Link
-              to="/contact"
+              to="/products"
               className="relative z-10 flex items-center gap-2 p-2 md:py-3 md:px-6"
             >
               Learn More <BikeIcon className="w-4 h-4" />

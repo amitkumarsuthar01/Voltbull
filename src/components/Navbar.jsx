@@ -6,6 +6,7 @@ import Products from "../pages/Products";
 import Distributer from "../pages/Distributer";
 import Contact from "../pages/Contact";
 import { FaBars, FaTimes } from "react-icons/fa";
+import ScrollToTop from "./ScrollToTop";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,6 +68,7 @@ const Navbar = () => {
       )}
 
       {/* Routes */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

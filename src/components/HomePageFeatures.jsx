@@ -107,13 +107,19 @@ const HomePageFeatures = () => {
             </div>
           </div>
           <div className="flex justify-center items-center">
-            <button className="w-auto rounded-sm bg-slate-900 text-white text-base">
+            <button className="group relative w-auto rounded-sm bg-slate-900 text-white text-base">
               <Link
-                to="/contact"
+                to="/products"
                 className="relative z-10 flex items-center gap-2 py-3 px-6"
               >
                 Explore Our Batteries <BikeIcon className="w-4 h-4" />
               </Link>
+              <span
+              className="absolute inset-0 bg-[#B80004]
+               [clip-path:polygon(0_0,0_0,0_10%)]
+               group-hover:[clip-path:polygon(0_0,300%_0,0_500%)]
+               transition-all duration-700 ease-in-out"
+            ></span>
             </button>
           </div>
         </div>

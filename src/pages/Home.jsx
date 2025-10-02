@@ -52,7 +52,7 @@ const Home = () => {
             </p>
             <button className="group relative w-40 rounded-sm bg-[#1A1A1A] text-white text-base font-medium">
               <Link
-                to="/contact"
+                to="/about"
                 className="relative z-10 flex items-center gap-2 py-2 px-4"
               >
                 Explore More <BikeIcon className="w-4 h-4" />

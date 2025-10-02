@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => (
 
     {/* Button */}
     <Link
-      to="/contact"
+      to="/about"
       className="mt-4 w-full text-center py-2 rounded-full bg-[#C50000] text-[#fff] border-2 border-transparent text-[0.875rem] font-semibold transition-all duration-300 group-hover:border-white"
     >
       Explore More
